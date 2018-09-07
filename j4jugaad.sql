@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Sep 07, 2018 at 01:49 AM
+-- Generation Time: Sep 08, 2018 at 02:28 AM
 -- Server version: 5.7.23-0ubuntu0.18.04.1
 -- PHP Version: 7.2.7-0ubuntu0.18.04.2
 
@@ -28,7 +28,6 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `STUDENTS` (
   `nos` int(11) NOT NULL,
-  `id` int(10) NOT NULL,
   `name` text NOT NULL,
   `gender` text NOT NULL,
   `email` text NOT NULL,
@@ -45,8 +44,9 @@ CREATE TABLE `STUDENTS` (
 -- Dumping data for table `STUDENTS`
 --
 
-INSERT INTO `STUDENTS` (`nos`, `id`, `name`, `gender`, `email`, `password`, `mobile`, `handle`, `college`, `stream`, `address`, `time`) VALUES
-(1, 0, 'test', 'Male', 'a@b.c', '4a7d1ed414474e4033ac29ccb8653d9b', 65, '000', '00', '00', '00', '2018-09-07 01:47:16');
+INSERT INTO `STUDENTS` (`nos`, `name`, `gender`, `email`, `password`, `mobile`, `handle`, `college`, `stream`, `address`, `time`) VALUES
+(1, 'test', 'Male', 'a@b.c', '4a7d1ed414474e4033ac29ccb8653d9b', 65, '000', '00', '00', '00', '2018-09-07 01:47:16'),
+(3, 'Test', 'Male', 'tester@t.t', '81dc9bdb52d04dc20036dbd8313ed055', 987654321, 'tester', 'Test', 'Test', 'Test', '2018-09-07 23:55:38');
 
 --
 -- Indexes for dumped tables
@@ -57,7 +57,6 @@ INSERT INTO `STUDENTS` (`nos`, `id`, `name`, `gender`, `email`, `password`, `mob
 --
 ALTER TABLE `STUDENTS`
   ADD PRIMARY KEY (`handle`),
-  ADD UNIQUE KEY `id` (`id`),
   ADD UNIQUE KEY `nos` (`nos`);
 
 --
@@ -68,7 +67,7 @@ ALTER TABLE `STUDENTS`
 -- AUTO_INCREMENT for table `STUDENTS`
 --
 ALTER TABLE `STUDENTS`
-  MODIFY `nos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `nos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
