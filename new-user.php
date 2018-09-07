@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     $coll=mysqli_real_escape_string($link, $_POST['coll']);
     $stream=mysqli_real_escape_string($link, $_POST['stream']);
     $today = date("Y-m-d H:i:s");
-    $query = "insert into `STUDENTS` (`id`,`name`,`gender`,`email`,`password`,`mobile`,`handle`,`college`,`stream`,`address`,`time`) VALUES ('0000','$name', '$gender', '$email','$pass','$mob','$handle','$coll','$stream','$addr','$today')";
+    $query = "insert into `STUDENTS` (`name`,`gender`,`email`,`password`,`mobile`,`handle`,`college`,`stream`,`address`,`time`) VALUES ('$name', '$gender', '$email','$pass','$mob','$handle','$coll','$stream','$addr','$today')";
     if(!mysqli_query($link, $query))
         {
             echo "Error".mysqli_error($link)."<br>";
