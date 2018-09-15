@@ -54,13 +54,13 @@ session_start();
           Posted Requests
         </div>
       </div>
-       <div class="col-md-4 options btn-primary font-weight-bold" onclick="window.location.href='login.php'">
+       <div class="col-md-4 options btn-primary font-weight-bold" onclick="window.location.href='notifications.php'">
         <div class="mx-auto text-center" style="width: inherit;">
           Notifications
         </div>
 
       </div>
-      <div class="col-md-4 options btn-primary font-weight-bold" onclick="window.location.href='login.php'">
+      <div class="col-md-4 options btn-primary font-weight-bold" onclick="window.location.href='index.php'">
         <div class="mx-auto text-center" style="width: inherit;">
           Buy Books
         </div>

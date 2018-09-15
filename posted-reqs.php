@@ -25,7 +25,7 @@ include 'conn.php';
   
 </head>
 <body>
-  <h1 class="display-1">Your Requests</h1>
+  <h1 class="display-1">Posted Requests</h1>
   <div class="container">
     <div class="row">
       <?php
@@ -47,7 +47,7 @@ include 'conn.php';
           <h6 class="card-subtitle mb-2 text-muted">Posted on '.$row["time"].'</h6>
           
           <a href="respond.php?book='.$row["book_name"].'&auth='.$row["author"].'&price='.$row["price"].'&time='.$row["time_span"].'&requester='.$row["requester"].'" class="card-link">Respond</a>
-          <a href="#" class="card-link">Delete</a>
+          
           </div>
           </div>';
           /*echo "<div class='row' id='post'>";
