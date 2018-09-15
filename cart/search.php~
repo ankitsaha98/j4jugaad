@@ -1,0 +1,37 @@
+<?php
+	mysqli_connect("localhost", "root", "123456") or die("Error connecting to database: ".mysql_error());
+	mysqli_select_db("j4j") or die(mysql_error());
+	echo "hello";
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>search results</title>
+</head>
+<body>
+	<?php
+		$query = $_GET['query'];
+		$min_length = 2;
+		echo "hello1";
+		if (strlen($query) >= $min_length) {
+			$query = htmlspecialchars($query);
+			$query = mysql_real_escape_string($query);
+			echo "hello2";
+			$rawres = mysql_query("SELECT * FROM Products WHERE ('name' LIKE '%".$query."%')") or die(mysql_error());
+			if (mysql_num_rows($rawres) > 0) {
+				echo "hello3";
+				while($results = mysql_fetch_array($rawres)){
+					echo "hello4";
+					echo "<p><h3>".$results['name']."</h3>"/*.$results['author'].$results['genre'].*/."</p>";
+				}
+			}
+			else{
+				echo "hello5";
+				echo "No results found";
+				echo "But don't worry the necessary jugaad for the book would be done in 2-3 working days";
+
+			}
+		}
+	?>
+</body>
+</html>
